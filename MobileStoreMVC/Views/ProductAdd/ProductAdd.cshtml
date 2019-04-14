@@ -1,0 +1,109 @@
+﻿@model IEnumerable<MobileStoreMVC.Models.Product>
+
+@{
+    ViewBag.Title = "ProductAdd";
+    Layout = "~/HomePage.cshtml";
+}
+
+
+
+
+
+
+<style>
+    .col-md-12 table td, th {
+        border: 1px solid white;
+        height: auto;
+        width: auto;
+        margin: 10px;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        opacity: 0.7;
+    }
+
+    .ok {
+        margin-left: 100px;
+    }
+
+    h1 {
+        color: white;
+    }
+</style>
+
+
+
+
+<h1 class="title-agile text-center">All Product </h1>
+<div class="content-w3ls" style="margin-left:100px;">
+    <div class="col-md-12 ok">
+
+        <h2>Product Add</h2>
+
+        <p>
+            @Html.ActionLink("Add New Product", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MCompany)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MModel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MSpecification)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MQty)
+                </th>
+              
+                <th>
+                    Edit
+
+                </th>
+                <th>
+                    Delete
+
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MCompany)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MModel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MSpecification)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MQty)
+                </td>
+                
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+            }
+
+        </table>
+
+
+    </div>
+</div>
+</div>
+<a href='@Url.Action("AdminLogin","AdminLogin")' class="btn btn-primary">Back to Home Page </a>

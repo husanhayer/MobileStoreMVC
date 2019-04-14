@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/HomePage.cshtml";
+}
+
+<h2>Contact</h2>
+
+
+<h1 class="title-agile text-center">Mobile Store Contact Us</h1>
+<div class="content-w3ls">
+    <div class="content-top-agile">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="content-bottom">
+        <form action="sendMsg" method="post">
+            <div class="field-group">
+                <span class="fa fa-user" aria-hidden="true"></span>
+                <div class="wthree-field">
+                    <input name="SName" id="text1" type="text" value="" placeholder="Name" required>
+                </div>
+            </div>
+            <div class="field-group">
+                <span class="fa fa-user" aria-hidden="true"></span>
+                <div class="wthree-field">
+                    <input name="SEmail" id="text1" type="email" value="" placeholder="Email" required>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <span class="fa fa-user" aria-hidden="true"></span>
+                <div class="wthree-field">
+                    <input name="SPhone" id="text1" type="number" value="" placeholder="Ph No" required>
+                </div>
+            </div>
+
+
+
+            <div class="field-group">
+                <span class="fa fa-lock" aria-hidden="true"></span>
+                <div class="wthree-field">
+                    <input name="SMsg" id="text1" type="text" placeholder="Message" required>
+                </div>
+            </div>
+
+
+            <div class="wthree-field">
+                <input id="saveForm" name="saveForm" type="submit" value="Send" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<a href='@Url.Action("AdminLogin","AdminLogin")' class="btn btn-primary">Back to Home Page </a>
+
+
+
+
+

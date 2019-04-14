@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "AdminLogin";
+    Layout = "~/HomePage.cshtml";
+}
+
+<h1 class="title-agile text-center">Mobile Store login form</h1>
+<div class="content-w3ls">
+    <div class="content-top-agile">
+        <h2>sign in</h2>
+    </div>
+    <div class="content-bottom">
+        <form action="verify" method="post">
+            <div class="field-group">
+                <span class="fa fa-user" aria-hidden="true"></span>
+                <div class="wthree-field">
+                    <input name="MUserName" id="text1"  type="text" value="" placeholder="username" required>
+                </div>
+            </div>
+            <div class="field-group">
+                <span class="fa fa-lock" aria-hidden="true"></span>
+                <div class="wthree-field">
+                    <input name="MPassword" id="password" type="Password" placeholder="password" required>
+                </div>
+            </div>
+            <ul class="list-login">
+                <li>
+                    <a href='@Url.Action("Contact","Contact")' class="text-right">Contact us</a>
+                </li>
+                <li class="clearfix"></li>
+            </ul>
+            <div class="wthree-field">
+                <input id="saveForm" name="saveForm" type="submit" value="sign in" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
